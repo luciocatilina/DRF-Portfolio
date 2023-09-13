@@ -3,11 +3,11 @@ from django.db import models
 # Create your models here.
 
 class Project(models.Model):
-    name = models.CharField(max_length=20, blank=False, null=False)
+    name = models.CharField(max_length=25, blank=False, null=False)
     description = models.TextField(blank=False, null=False)
     tools = models.TextField(blank=False, null=False)
     repository = models.TextField(blank=False, null=False)
-    host = models.TextField(blank=False, null=False)
+    host = models.TextField(blank=True, null=True)
     
 class SmallProject(Project):
 
